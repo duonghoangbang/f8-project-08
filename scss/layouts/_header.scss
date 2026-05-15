@@ -1,0 +1,113 @@
+@use "../abstracts";
+%flexItemCenter {
+  display: flex;
+  align-items: center;
+}
+.header {
+  background: var(--header-bg-color);
+}
+.navbar {
+  @include abstracts.breakpoint(lg) {
+    display: none;
+  }
+
+  &__list {
+    @extend %flexItemCenter;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__item {
+    @extend %flexItemCenter;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 146.667%;
+  }
+  &__arrow {
+    text-align: center;
+    padding-top: 5px;
+  }
+}
+
+.top-bar {
+  @extend %flexItemCenter;
+  justify-content: space-between;
+  padding: 30px 0;
+
+  @include abstracts.breakpoint(sm) {
+    padding: 16px 0;
+  }
+
+  &__more {
+    display: none;
+
+    @include abstracts.breakpoint(lg) {
+      display: block;
+    }
+  }
+}
+
+.top-act {
+  @extend %flexItemCenter;
+  justify-content: center;
+  gap: 20px;
+
+  &__group {
+    display: flex;
+    background: var(--top-act-group-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 20px 60px 10px var(--top-act-group-shadow);
+
+    @include abstracts.breakpoint(md) {
+      display: none;
+    }
+    @include abstracts.breakpoint(sm) {
+      display: none;
+    }
+  }
+  &__group--single &__btn {
+    padding: 13px;
+    border-radius: 8px;
+  }
+  &__btn {
+    @extend %flexItemCenter;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 20px;
+    border-radius: 8px;
+    background: var(--top-act-group-bg-color);
+  }
+
+  &__seperate {
+    width: 1px;
+    height: 30px;
+    background: var(--top-act-group-separate);
+    margin: 10px 20px;
+    @extend %flexItemCenter;
+  }
+  &__title {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 146.667%;
+  }
+
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background:
+      lightgray -205.145px -22.64px / 819.939% 546.626% no-repeat,
+      #dfd2fa;
+    box-shadow: 0 4px 14px 2px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+  }
+}

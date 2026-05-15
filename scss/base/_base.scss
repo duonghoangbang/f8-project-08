@@ -1,0 +1,36 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: Gordita, sans-serif;
+  color: var(--text-color);
+}
+button {
+  border: none; /* Xóa bỏ đường viền mặc định */
+  outline: none; /* Xóa đường viền focus mặc định */
+  padding: 0; /* Xóa khoảng cách đệm mặc định */
+  margin: 0; /* Xóa khoảng cách ngoài mặc định */
+  cursor: pointer; /* Đổi con trỏ chuột thành hình bàn tay khi rêu vào */
+  font: inherit; /* Thừa hưởng font chữ từ phần tử cha */
+  color: inherit; /* Thừa hưởng màu chữ từ phần tử cha */
+}
+a {
+  text-decoration: none;
+}
+button,
+input,
+textarea,
+select {
+  color: inherit;
+  font-family: inherit;
+}
+.icon {
+  filter: var(--icon-color);
+}
