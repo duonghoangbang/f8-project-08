@@ -16,30 +16,90 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-      <ul class="navbar__list">
+      <ul class="navbar__list js-dropdown-list">
         <li class="navbar__item">
-          <a href="" class="navbar__link"> Departments </a>
-          <img
-            src="./assets/icons/arrow.svg"
-            alt=""
-            class="icon navbar__arrow"
-          />
+          <a href="" class="navbar__link">
+            Departments
+            <img
+              src="./assets/icons/arrow.svg"
+              alt=""
+              class="icon navbar__arrow"
+            />
+          </a>
+
+          <div class="dropdown">
+            <div class="dropdown__inner">
+              <div class="top-menu">
+                <div class="top-menu__main">
+                  <div class="menu-column">
+                    <div class="menu-column__icon">
+                      <img
+                        src="/assets/icons/menu-column__icon-1.svg"
+                        alt=""
+                        class="menu-column__icon-1"
+                      />
+                      <img
+                        src="/assets/icons/menu-column__icon-2.svg"
+                        alt=""
+                        class="menu-column__icon-2"
+                      />
+                    </div>
+                    <div class="menu-column__content">
+                      <div class="menu-column__heading">All Departments</div>
+                      <ul class="menu-column__list">
+                        <li>
+                          <a href="" class="menu-column__link"
+                            >Savings & Featured Shops</a
+                          >
+                        </li>
+                        <li>
+                          <a href="" class="menu-column__link">Electronics</a>
+                        </li>
+                        <li>
+                          <a href="" class="menu-column__link"
+                            >Clothing, Shoes & Accessories</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="navbar__item">
+          <a href="" class="navbar__link">
+            Grocery
+            <img
+              src="./assets/icons/arrow.svg"
+              alt=""
+              class="navbar__arrow icon"
+            />
+          </a>
+          <div class="dropdown">
+            <div class="dropdown__inner"></div>
+          </div>
         </li>
         <li class="navbar__item">
-          <a href="" class="navbar__link"> Grocery </a>
-          <img
-            src="./assets/icons/arrow.svg"
-            alt=""
-            class="navbar__arrow icon"
-          />
-        </li>
-        <li class="navbar__item">
-          <a href="" class="navbar__link"> Beauty </a>
-          <img
-            src="./assets/icons/arrow.svg"
-            alt=""
-            class="navbar__arrow icon"
-          />
+          <a href="" class="navbar__link">
+            Beauty
+            <img
+              src="./assets/icons/arrow.svg"
+              alt=""
+              class="navbar__arrow icon"
+            />
+          </a>
+          <div class="dropdown">
+            <div class="dropdown__inner">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat,
+              ducimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Placeat, ducimus. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Placeat, ducimus. Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Placeat, ducimus.
+            </div>
+          </div>
         </li>
       </ul>
     </nav>

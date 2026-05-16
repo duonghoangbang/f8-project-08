@@ -6,40 +6,11 @@
 .header {
   background: var(--header-bg-color);
 }
-.navbar {
-  @include abstracts.breakpoint(lg) {
-    display: none;
-  }
-
-  &__list {
-    @extend %flexItemCenter;
-    justify-content: center;
-    gap: 30px;
-  }
-  &__item {
-    @extend %flexItemCenter;
-    gap: 6px;
-    cursor: pointer;
-  }
-
-  &__link {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 146.667%;
-  }
-  &__arrow {
-    text-align: center;
-    padding-top: 5px;
-  }
-}
-
 .top-bar {
   @extend %flexItemCenter;
   justify-content: space-between;
-  padding: 30px 0;
+  // padding: 30px 0;
+  position: relative;
 
   @include abstracts.breakpoint(sm) {
     padding: 16px 0;
@@ -109,5 +80,45 @@
       #dfd2fa;
     box-shadow: 0 4px 14px 2px rgba(0, 0, 0, 0.08);
     cursor: pointer;
+  }
+}
+.navbar {
+  @include abstracts.breakpoint(lg) {
+    display: none;
+  }
+
+  &__list {
+    @extend %flexItemCenter;
+    justify-content: center;
+    // gap: 30px;
+  }
+  &__item {
+    @extend %flexItemCenter;
+    // gap: 6px;
+    cursor: pointer;
+    padding: 30px 15px;
+    // padding-bottom: 10px;
+
+    :first-child {
+      padding-left: -15px;
+    }
+    :last-child {
+      padding-right: -15px;
+    }
+  }
+  &__item:hover .dropdown {
+    display: block;
+  }
+  &__link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 146.667%;
+  }
+  &__arrow {
+    text-align: center;
+    padding-top: 5px;
   }
 }
